@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^5ed!kqckwo9%r)k_ef=8=fub1d+_0^1l&ovz83%%#3prufe-7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.99.198.103', 'bathstudenthomes.com', 'www.bathstudenthomes.com']
 
 
 # Application definition
@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'advisors.apps.AdvisorsConfig',
     'accounts.apps.AccountsConfig',
     'contacts.apps.ContactsConfig',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',	
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -82,10 +84,10 @@ WSGI_APPLICATION = 'bts.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btsdb',
-        'USER': 'postgres',
-        'PASSWORD': 'password123',
-        'HOST': 'localhost'
+        'NAME': 'bsh_prod',
+        'USER': 'bshadmin',
+        'PASSWORD': 'bshadmin123!',
+        'HOST': 'localhost',
     }
 }
 

@@ -26,14 +26,5 @@ def contact(request):
 
         contact.save()
 
-        # Send email
-        send_mail(
-                'Property Listing Inquiry',
-                'There has been an inquiry for ' + listing + '. Sign into the admin area for more info',
-                'chriscalisthenics23@gmail.com',
-                [advisor_email, 'christopherpearce10@gmail.com'],
-                fail_silently=False
-        )
-
         messages.success(request, 'Your request has been submitted, an advisor will get back to you as soon as possible')
         return redirect ('/listings/'+listing_id)
